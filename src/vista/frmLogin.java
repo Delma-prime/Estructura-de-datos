@@ -56,11 +56,11 @@ public class frmLogin extends javax.swing.JFrame {
         pnIncio.setLayout(pnIncioLayout);
         pnIncioLayout.setHorizontalGroup(
             pnIncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 800, Short.MAX_VALUE)
+            .addGap(0, 989, Short.MAX_VALUE)
         );
         pnIncioLayout.setVerticalGroup(
             pnIncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 520, Short.MAX_VALUE)
+            .addGap(0, 601, Short.MAX_VALUE)
         );
 
         MnArchivo.setText("Archivo");
@@ -197,11 +197,11 @@ public class frmLogin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, 989, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
+            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, 601, Short.MAX_VALUE)
         );
 
         pack();
