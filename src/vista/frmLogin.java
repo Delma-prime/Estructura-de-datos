@@ -164,14 +164,29 @@ public class frmLogin extends javax.swing.JFrame {
 
         MnAlumPen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, 0));
         MnAlumPen.setText("Alumno con matricula pendiente");
+        MnAlumPen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnAlumPenActionPerformed(evt);
+            }
+        });
         MnReporte.add(MnAlumPen);
 
         MnAlumVigen.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F6, 0));
         MnAlumVigen.setText("Alumno con matricula vigente");
+        MnAlumVigen.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnAlumVigenActionPerformed(evt);
+            }
+        });
         MnReporte.add(MnAlumVigen);
 
         MnAlumCur.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F7, 0));
         MnAlumCur.setText("Alumnos matriculados por curso");
+        MnAlumCur.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnAlumCurActionPerformed(evt);
+            }
+        });
         MnReporte.add(MnAlumCur);
 
         jMenuBar2.add(MnReporte);
@@ -186,9 +201,7 @@ public class frmLogin extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(pnIncio, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, 520, Short.MAX_VALUE)
         );
 
         pack();
@@ -247,6 +260,27 @@ public class frmLogin extends javax.swing.JFrame {
          pnIncio.add(ventana);
         ventana.show();
     }//GEN-LAST:event_MnConRetiroActionPerformed
+
+    private void MnAlumPenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnAlumPenActionPerformed
+        // TODO add your handling code here:
+        frmReportePendiente ventana = new frmReportePendiente();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnAlumPenActionPerformed
+
+    private void MnAlumVigenActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnAlumVigenActionPerformed
+        // TODO add your handling code here:
+        frmMatriculaVigente ventana = new frmMatriculaVigente();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnAlumVigenActionPerformed
+
+    private void MnAlumCurActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnAlumCurActionPerformed
+        // TODO add your handling code here:
+        frmMatriculadosCurso ventana = new frmMatriculadosCurso();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnAlumCurActionPerformed
     
     /**
      * @param args the command line arguments
