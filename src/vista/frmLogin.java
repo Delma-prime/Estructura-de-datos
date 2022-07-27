@@ -26,7 +26,7 @@ public class frmLogin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnLogin = new javax.swing.JPanel();
+        pnIncio = new javax.swing.JDesktopPane();
         jMenuBar2 = new javax.swing.JMenuBar();
         MnArchivo = new javax.swing.JMenu();
         MnSalir = new javax.swing.JMenuItem();
@@ -47,16 +47,20 @@ public class frmLogin extends javax.swing.JFrame {
         MnAlumCur = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocationByPlatform(true);
+        setResizable(false);
 
-        javax.swing.GroupLayout pnLoginLayout = new javax.swing.GroupLayout(pnLogin);
-        pnLogin.setLayout(pnLoginLayout);
-        pnLoginLayout.setHorizontalGroup(
-            pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        pnIncio.setPreferredSize(new java.awt.Dimension(800, 475));
+
+        javax.swing.GroupLayout pnIncioLayout = new javax.swing.GroupLayout(pnIncio);
+        pnIncio.setLayout(pnIncioLayout);
+        pnIncioLayout.setHorizontalGroup(
+            pnIncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 800, Short.MAX_VALUE)
         );
-        pnLoginLayout.setVerticalGroup(
-            pnLoginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 477, Short.MAX_VALUE)
+        pnIncioLayout.setVerticalGroup(
+            pnIncioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 520, Short.MAX_VALUE)
         );
 
         MnArchivo.setText("Archivo");
@@ -76,10 +80,20 @@ public class frmLogin extends javax.swing.JFrame {
 
         MnAlumno.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
         MnAlumno.setText("Alumno");
+        MnAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnAlumnoActionPerformed(evt);
+            }
+        });
         MnMantenimiento.add(MnAlumno);
 
         MnCurso.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         MnCurso.setText("Curso");
+        MnCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnCursoActionPerformed(evt);
+            }
+        });
         MnMantenimiento.add(MnCurso);
 
         jMenuBar2.add(MnMantenimiento);
@@ -88,10 +102,20 @@ public class frmLogin extends javax.swing.JFrame {
 
         MnMatricula.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
         MnMatricula.setText("Matricula");
+        MnMatricula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnMatriculaActionPerformed(evt);
+            }
+        });
         MnRegistro.add(MnMatricula);
 
         MnRetiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, 0));
         MnRetiro.setText("Retiro");
+        MnRetiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnRetiroActionPerformed(evt);
+            }
+        });
         MnRegistro.add(MnRetiro);
 
         jMenuBar2.add(MnRegistro);
@@ -100,18 +124,38 @@ public class frmLogin extends javax.swing.JFrame {
 
         MnConAlumno.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, java.awt.event.InputEvent.ALT_DOWN_MASK));
         MnConAlumno.setText("Alumno");
+        MnConAlumno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnConAlumnoActionPerformed(evt);
+            }
+        });
         MnConsulta.add(MnConAlumno);
 
         MnConCurso.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, java.awt.event.InputEvent.ALT_DOWN_MASK));
         MnConCurso.setText("Curso");
+        MnConCurso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnConCursoActionPerformed(evt);
+            }
+        });
         MnConsulta.add(MnConCurso);
 
         MnConMatricula.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, java.awt.event.InputEvent.ALT_DOWN_MASK));
         MnConMatricula.setText("Matricula");
+        MnConMatricula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnConMatriculaActionPerformed(evt);
+            }
+        });
         MnConsulta.add(MnConMatricula);
 
-        MnConRetiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        MnConRetiro.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F5, java.awt.event.InputEvent.ALT_DOWN_MASK));
         MnConRetiro.setText("Retiro");
+        MnConRetiro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                MnConRetiroActionPerformed(evt);
+            }
+        });
         MnConsulta.add(MnConRetiro);
 
         jMenuBar2.add(MnConsulta);
@@ -138,20 +182,72 @@ public class frmLogin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(pnIncio, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(pnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(pnIncio, javax.swing.GroupLayout.PREFERRED_SIZE, 520, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void MnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnSalirActionPerformed
-        // TODO add your handling code here:
+        System.exit(0);
     }//GEN-LAST:event_MnSalirActionPerformed
 
+    private void MnAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnAlumnoActionPerformed
+        
+        frmAlumno ventana= new frmAlumno();
+        pnIncio.add(ventana);
+        ventana.show();
+        
+    }//GEN-LAST:event_MnAlumnoActionPerformed
+
+    private void MnCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnCursoActionPerformed
+        frmCurso ventana = new frmCurso();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnCursoActionPerformed
+
+    private void MnMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnMatriculaActionPerformed
+        frmMatricula ventana = new frmMatricula();
+        pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnMatriculaActionPerformed
+
+    private void MnRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnRetiroActionPerformed
+        frmRetiro ventana = new frmRetiro();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnRetiroActionPerformed
+
+    private void MnConAlumnoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnConAlumnoActionPerformed
+        frmConAlumno ventana = new frmConAlumno();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnConAlumnoActionPerformed
+
+    private void MnConCursoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnConCursoActionPerformed
+        frmConCurso ventana = new frmConCurso();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnConCursoActionPerformed
+
+    private void MnConMatriculaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnConMatriculaActionPerformed
+        frmConMatricula ventana = new frmConMatricula();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnConMatriculaActionPerformed
+
+    private void MnConRetiroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_MnConRetiroActionPerformed
+        frmConRetiro ventana = new frmConRetiro();
+         pnIncio.add(ventana);
+        ventana.show();
+    }//GEN-LAST:event_MnConRetiroActionPerformed
+    
     /**
      * @param args the command line arguments
      */
@@ -206,6 +302,6 @@ public class frmLogin extends javax.swing.JFrame {
     private javax.swing.JMenuItem MnRetiro;
     private javax.swing.JMenuItem MnSalir;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JPanel pnLogin;
+    private javax.swing.JDesktopPane pnIncio;
     // End of variables declaration//GEN-END:variables
 }
